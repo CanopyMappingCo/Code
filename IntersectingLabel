@@ -1,0 +1,3 @@
+var fs = FeatureSetByName($map, "PHZM Vector")
+var int = First(Intersects($feature, FS))
+return int.ClassName
