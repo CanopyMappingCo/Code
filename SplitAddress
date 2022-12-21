@@ -1,0 +1,3 @@
+var addr = $feature.LOCATION
+
+return Split(addr, ' ', 1)[0]
