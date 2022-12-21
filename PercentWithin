@@ -1,0 +1,25 @@
+var FEMA = OrderBy(Intersects($feature, FeatureSetByName($map, "PHZM Vector")), "ClassName");
+var cnt = Count(FEMA);
+var parcelarea = AreaGeodetic($feature, "square-feet");
+
+var result = "";
+var dct = {};
+if (cnt > 0) {
+    for (var FEMApol in FEMA) {
+        var intersectarea = AreaGeodetic(Intersection($feature, FEMApol), "square-feet");
+        var category = Text(FEMApol.ClassName);
+        if (HasKey(dct, category)) {
+            dct[category] += intersectarea;
+        } else {
+            dct[category] = intersectarea;
+        }
+    }
+    for (var category in dct) {
+        var percentage = (dct[category] * 100.0) / parcelarea;
+        result += TextFormatting.NewLine + "" + category + "  (" + Round(percentage, 2) + "%)";
+    }
+} else {
+    result = "No Data";
+}
+
+return result
