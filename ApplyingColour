@@ -1,0 +1,80 @@
+var fs = FeatureSetByName($map, "PHZM Vector")
+var int = First(Intersects($feature, FS))
+if (int.gridcode == 1){
+  return "D6D6FF"
+}
+if (int.gridcode == 2){
+  return "C4C4F2"
+}
+if (int.gridcode == 3){
+  return "ABABD9"
+}
+if (int.gridcode == 4){
+  return "EBB0EB"
+}
+if (int.gridcode == 5){
+  return "E091EB"
+}
+if (int.gridcode == 6){
+  return "CF7DDB"
+}
+if (int.gridcode == 7){
+  return "A66BFF"
+}
+if (int.gridcode == 8){
+  return "5A75ED"
+}
+if (int.gridcode == 9){
+  return "73A1FF"
+}
+if (int.gridcode == 10){
+  return "5EC9E0"
+}
+if (int.gridcode == 11){
+  return "47BA47"
+}
+if (int.gridcode == 12){
+  return "78C756"
+}
+if (int.gridcode == 13){
+  return "ABD669"
+}
+if (int.gridcode == 14){
+  return "CDDB70"
+}
+if (int.gridcode == 15){
+  return "EDDA85"
+}
+if (int.gridcode == 16){
+  return "EBCB57"
+}
+if (int.gridcode == 17){
+  return "DBB64F"
+}
+if (int.gridcode == 18){
+  return "F5B678"
+}
+if (int.gridcode == 19){
+  return "EB9C36"
+}
+if (int.gridcode == 20){
+  return "E6781E"
+}
+if (int.gridcode == 21){
+  return "E6561E"
+}
+if (int.gridcode == 22){
+  return "E88564"
+}
+if (int.gridcode == 23){
+  return "D4594E"
+}
+if (int.gridcode == 24){
+  return "B51228"
+}
+if (int.gridcode == 25){
+  return "962F1D"
+}
+if (int.gridcode == 26){
+  return "751A08"
+}
